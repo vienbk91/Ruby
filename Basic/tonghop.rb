@@ -17,6 +17,7 @@ loop do
 	index = gets.chomp
 
 	if index.to_i == 1
+		# Tạo bảng cửu chương của x với x nhập từ bàn phím 
 		puts "Chuong trinh in ra bang cuu chuong cua x. Moi ban nhap x (1 < x < 9)"
 		x = gets.chomp
 		puts "- - - - Ket qua - - - -"
@@ -35,6 +36,7 @@ loop do
 			break
 		end
 	elsif index.to_i == 2
+		# Tính tổng của các số nguyên từ 0 đến x với x nhập từ bàn phím
 		puts "Chuong trinh se tinh tong cac so nguyen tu 0 den x. Moi ban nhap x (x > 0)"
 		a = gets.chomp
 		puts "- - - - Ket qua - - - -"
@@ -55,13 +57,10 @@ loop do
 			break
 		end
 	elsif index.to_i == 3
-
+		# In ra tam giác vuông
 		puts "- - - - Ket qua - - - -"
-		for i in 1..9 do 
-			for j in 1..9 do
-				break if j > i
-			end
-			puts "\n"
+		for i in 1..11 do 
+			puts "* " * i
 		end
 		puts "- - - - - - - - - - - -"
 
@@ -76,7 +75,12 @@ loop do
 	elsif index.to_i == 4
 
 		puts "- - - - Ket qua - - - -"
+		# Phần code xử lý cho bài 4 chưa được hoàn thành
+		# Start code
 
+
+
+		#End code
 		puts "- - - - - - - - - - - -"
 
 		puts "Nhap \"y\" de quay lai menu chinh . Nhap ky tu khac de thoat."

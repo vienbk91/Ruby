@@ -2,7 +2,6 @@
 #Hash cũng tương tự như mảng nhưng thay vì sử dụng index như mảng thì trong Hash mình sử dụng key
 
 
-
 require "awesome_print"
 
 
@@ -34,3 +33,6 @@ c = h.map {
 }
 
 ap c
+
+
+

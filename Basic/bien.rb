@@ -11,6 +11,7 @@ class Nguoi
 	GIOI_TINH = ["nam" , "nu"] #constants
 
 
+	#Contructor
 	def initialize(ten,gioitinh)
 
 		# Biến instance bắt đầu bằng ký tự @ kèm theo tên biến
