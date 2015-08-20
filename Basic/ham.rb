@@ -32,6 +32,7 @@ end
 
 # Gọi hàm mà ko truyền đối số thì giá trị của đối số sẽ nhận giá trị mặc định
 puts phuongtrinhbacnhat
+puts phuongtrinhbacnhat(4,3)
 
 
 # Hàm xác định 1 số là chăn hay lẻ
