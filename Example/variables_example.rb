@@ -38,16 +38,16 @@ print "Say","Hello","to","the","World \n"
 ###################################################################
 ## Phân biệt %q và %Q trong Ruby
 ###################################################################
-$ str = 'sushant'
+str = 'sushant'
 
-$ %q[#{str} "mane"]  #%q() không có nội suy ngoại trừ \,[ và ]
- => "\#{str} \"mane\""
+%q[#{str} "mane"]  #%q() không có nội suy ngoại trừ \,[ và ]
+#=> "\#{str} \"mane\""
 
-$ %Q[#{str} "mane"] #%Q() có nội suy
- => "sushant \"mane\""
+%Q[#{str} "mane"] #%Q() có nội suy
+#=> "sushant \"mane\""
 
-$ %[#{str} "mane"]
- => "sushant \"mane\""
+%[#{str} "mane"]
+#=> "sushant \"mane\""
 
 
 ###################################################################
@@ -129,18 +129,25 @@ class Customer
 		@cur_addr = address
 	end
 
-	def display_details()
+	def display_details
 		puts "Customer id : #{@cur_id}"
 		puts "Customer name : #{@cur_name}"
 		puts "Customer address : #{@cur_addr}"
 	end
 
 	@@no_of_customer = 0
-	def total_no_of_customer()
+	def total_no_of_customer
 		@@no_of_customer += 1
 		puts "Total number of customer: #{@@no_of_customer}"
-
+	end
 end
+
+class Aclass < Customer
+	def get_current_id
+		@cur_id += 1
+		puts "Current  id : #{@cur_id}"
+	end 
+end 
 
 #Create object
 cust1 = Customer.new(1, "Vien" , "Shinjuku-Tokyo-Japan")
@@ -149,8 +156,7 @@ cust2 = Customer.new(2, "Suzuki" , "Yokohama-Japan")
 cust1.display_details
 cust2.display_details
 
-
-######################################################
-## Class Variable - Biến trong lớp
-######################################################
-
+#Test a
+test = Aclass.new(3, "ABC" , "Ha Noi ^ Viet Nam")
+test.display_details
+test.get_current_id
